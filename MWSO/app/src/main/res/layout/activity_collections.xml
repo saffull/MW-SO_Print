@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Collections">
+
+        <LinearLayout
+            android:id="@+id/llx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/acvCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Party"
+                        android:textColor="@color/custinfo_edittext_color"
+                        android:textSize="14sp" />
+                    <ImageButton
+                        android:id="@+id/imgBtnSearchClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/imgBtnCustSearchbyName"
+                        android:background="@null"
+                        android:onClick="ClearSearch"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:src="@drawable/ic_baseline_close_24px" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnCustSearchbyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/acvCustomerName"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:src="@drawable/ic_search" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/ralewaybold"
+                    android:text="Select Store"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <com.techsmith.mw_so.collection_utils.CSpinner
+                        android:id="@+id/storeSelect"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                    <!--<ImageButton
+                        android:id="@+id/imgBtnSearchbyHUID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="resetSpinner"
+                        android:visibility="gone"
+                        android:layout_marginLeft="15dp"
+                        android:layout_alignRight="@+id/storeSelect"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:src="@drawable/ic_reset" />-->
+                </LinearLayout>
+
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/etCustomerId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select Store"
+                        android:singleLine="true"
+                        android:textColor="@color/custinfo_edittext_color" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnSearchbyHUID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/etCustomerId"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:src="@drawable/ic_search" />
+                </RelativeLayout>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/ralewaybold"
+                android:text="Payment"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/widget376"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/radioCOLPayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioCOLCash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/ralewaybold"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Cash" />
+
+                        <RadioButton
+                            android:id="@+id/radioCOLCheque"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:fontFamily="@font/ralewaybold"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Cheque" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btnCOL_AutoFill"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="3dp"
+                        android:enabled="false"
+                        android:background="@color/green"
+                        android:fontFamily="@font/fabrica"
+                        android:onClick="AutoFillAmount"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="Auto Fill"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/activity_bg_color"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.9"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="left"
+                    android:text="Bill No"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="right"
+                    android:text="Due"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="center"
+                    android:text="Pay"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="center"
+                    android:text="Select"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        <!--    <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recycler_view"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="410dp"
+                android:layout_weight="1" />-->
+
+
+            <ListView
+                android:id="@+id/lvCollectionlist"
+                android:layout_width="match_parent"
+                android:layout_height="410dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:saveEnabled="true"
+                android:transcriptMode="normal"
+                android:layout_marginBottom="10dp"
+                android:scrollbars="vertical" />
+            <!--android:transcriptMode="alwaysScroll"-->
+
+        </LinearLayout>
+
+
+    <include layout="@layout/bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialogwindow_bg"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <ImageButton
+        android:id="@+id/imgBtnCloseRemarksWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31.33dp"
+        android:layout_marginTop="39.33dp"
+        android:background="@drawable/ic_cancel" />
+
+
+    <EditText
+        android:id="@+id/etAddRemarks_Itemwise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llremarksBottom"
+        android:layout_below="@+id/imgBtnCloseRemarksWindow"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/et_roundedbox_bg"
+        android:backgroundTint="@color/white"
+        android:gravity="top|start"
+        android:hint="Add Remarks"
+        android:inputType="textMultiLine|textCapSentences"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/llremarksBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnClearRemarks_Itemwise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear" />
+
+        <Button
+            android:id="@+id/btnOkRemarks_Itemwise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/ok" />
+
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/btnOkRemarks_Itemwise"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="OK"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="30px"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"/>-->
+
+</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/dialogwindow_bg"-->
+    <!--android:paddingLeft="20px"-->
+    <!--android:paddingRight="20px">-->
+
+
+    <!--<ImageButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="31.33px"-->
+    <!--android:layout_marginTop="39.33px"-->
+    <!--android:background="@drawable/ic_baseline_close_24px"-->
+    <!--android:id="@+id/imgBtnCloseRemarksWindow" />-->
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/etAddRemarks_Itemwise"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:hint="Add Remarks"-->
+    <!--android:textColorHint="@color/whites"-->
+    <!--android:backgroundTint="@color/whites"-->
+    <!--android:textSize="56px"-->
+    <!--android:textColor="@color/whites"-->
+    <!--android:layout_marginTop="20px"-->
+    <!--android:layout_marginLeft="25px"-->
+    <!--android:background="@drawable/et_roundedbox_bg"/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnOkRemarks_Itemwise"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="OK"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="30px"/>-->
+
+    <!--</LinearLayout>-->

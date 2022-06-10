@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginBottom="2dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+  <!--  <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/invoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/fabrica"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/billno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/fabrica"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/items"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/selectBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ok"
+            android:textSize="14sp" />
+    </LinearLayout>
+  <!--  </androidx.cardview.widget.CardView>-->
+
+</androidx.cardview.widget.CardView>

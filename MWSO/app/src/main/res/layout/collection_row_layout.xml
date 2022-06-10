@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <TextView
+            android:id="@+id/billno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:fontFamily="@font/fabrica"
+            android:gravity="left"
+            android:text="Bill No"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/due"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/fabrica"
+            android:gravity="right"
+            android:text="Due"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:visibility="invisible"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ok"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

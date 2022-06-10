@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><!--Created by Pavithra on 24-08-2020-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tvSlNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="1"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Product Name"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvmrp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:fontFamily="@font/fabrica"
+            android:text="MRP"
+            android:gravity="right"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="wrap_content"
+            android:layout_weight="0.2"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <!--.2 .3 .4 .1-->
+        <TextView
+            android:id="@+id/tvMRP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="left"
+            android:text="MRP"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvqty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:drawableStartCompat="@drawable/ic_edit" />
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:text="Rate"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="right"
+            android:paddingRight="30px"
+            android:text="QTY"
+            android:textColor="#152E61" />
+
+        <!--<EditText-->
+        <!--android:id="@+id/tvQty"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="0.3"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="#152E61"-->
+        <!--android:textStyle="bold"-->
+        <!--android:paddingRight="30px"-->
+        <!--android:text="QTY"/>-->
+
+        <TextView
+            android:id="@+id/tvFreeQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="right"
+            android:text="0"
+            android:textColor="@color/black" />
+        <!-- <TextView
+             android:id="@+id/tvTotall"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.2"
+             android:gravity="right"
+             android:text="Total"
+             android:textColor="@color/black" />-->
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="right"
+            android:text="Total"
+            android:textColor="@color/black" />
+
+        <ImageButton
+            android:id="@+id/imgBtnRemarksItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey" />
+
+</LinearLayout>

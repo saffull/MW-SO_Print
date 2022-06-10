@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/fabrica"
+            android:text="Enter The Remarks" />
+
+
+        <EditText
+            android:ems="10"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/fabrica"
+            android:id="@+id/etUserRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </EditText>
+        <requestFocus />
+
+    </LinearLayout>
+
+</LinearLayout>

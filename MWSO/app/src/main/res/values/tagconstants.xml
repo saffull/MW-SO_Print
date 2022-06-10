@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <item type="id" name="key_slno" />
+        <item type="id"  name="key_itemname" />
+        <item type="id" name="key_batch" />
+        <item type="id"  name="key_soh" />
+        <item type="id"  name="key_rate" />
+        <item type="id"  name="key_billingrate" />
+        <item type="id"  name="key_cpm_flag" />
+        <item type="id"  name="key_uperpack" />
+        <item type="id"  name="key_packname" />
+        <item type="id"  name="key_unitname" />
+        <item type="id"  name="key_sohunits" />
+        <item type="id"  name="key_sohpacks" />
+        <item type="id"  name="key_lineindex" />
+        <item type="id"  name="key_discper" />
+        <item type="id"  name="key_caneditrate" />
+        <item type="id"  name="key_canbillnonsohitem" />
+        <item type="id"  name="key_schemedetails" />
+
+        <item type="id"  name="key_sopopup_detailline_01" />
+        <item type="id"  name="key_sopopup_detailline_02" />
+        <item type="id"  name="key_sopopup_detailline_03" />
+
+        <item type="id"  name="key_col_slno" />
+        <item type="id"  name="key_col_pamt" />
+        <item type="id"  name="key_col_edt_ramt" />
+        
+        <item type="id"  name="key_btn_detail_targetid" />
+        <item type="id"  name="key_btn_detail_method" />
+
+        <item type="id"  name="key_btn_delete_targetid" />
+        <item type="id"  name="key_btn_delete_method" />
+        
+</resources>

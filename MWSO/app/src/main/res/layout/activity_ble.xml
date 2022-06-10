@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Status:" />
+
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label"
+        android:editable="false"
+        android:ems="10"
+        android:hint="Output" />
+
+    <com.techsmith.mw_so.collection_utils.CSpinner
+        android:id="@+id/storeSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entry"
+        android:layout_margin="10dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/storeSelect"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Device Staus: loading..."
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status">
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Connect" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Print" />
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll1"
+        android:layout_below="@+id/ll"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doPrint"
+            android:layout_margin="5dp"
+            android:text="p" />
+        <Button
+            android:layout_width="wrap_content"
+           android:id="@+id/button_bluetooth_browse"
+            android:layout_height="wrap_content"
+            android:onClick="browseBluetoothDevice"
+            android:layout_margin="5dp"
+            android:text="select" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/MessageDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/ll1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/fabrica"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:text="Print Preview"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</RelativeLayout>

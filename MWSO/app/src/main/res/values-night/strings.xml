@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculate">Calculate</string>
+    <string name="clear">CLEAR</string>
+    <string name="ok">OK</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="customer_information">Customer Information</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="delivery_amp_collection">Collections</string>
+    <string name="delivery">Delivery</string>
+    <string name="delivery_date">Delivery Date</string>
+</resources>

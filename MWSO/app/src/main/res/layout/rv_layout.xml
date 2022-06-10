@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <!--  <androidx.cardview.widget.CardView
+              android:id="@+id/card_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              app:cardCornerRadius="5dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/docno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.2"
+                android:fontFamily="@font/fabrica"
+                android:gravity="start"
+                android:inputType="text"
+                android:text="DOC NO"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+
+             <!--  <TextView
+                  android:id="@+id/docdate"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0.8"
+                 android:fontFamily="@font/fabrica"
+                  android:gravity="left"
+                  android:text="ok"
+                  android:textColor="@color/black"
+                  android:textSize="14sp" />-->
+
+
+            <TextView
+                android:id="@+id/overdue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:fontFamily="@font/fabrica"
+                android:gravity="end"
+                android:visibility="gone"
+                android:text="Bill Amount"
+                android:textColor="@color/green"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Billamount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:fontFamily="@font/fabrica"
+                android:gravity="end"
+                android:text="Balance"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+
+            <!-- <TextView
+                 android:id="@+id/Balance"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.8"
+                 android:fontFamily="@font/fabrica"
+                 android:gravity="center"
+                 android:text="over due"
+                 android:textColor="@color/black"
+                 android:textSize="14sp" />-->
+        </LinearLayout>
+
+        <!-- </androidx.cardview.widget.CardView>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

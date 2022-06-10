@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_blue"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <ImageButton
+        android:id="@+id/imgBtnCloseQtySelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31.33dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_cancel" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSelectedItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/white" />
+
+            <!--            android:textSize="56px"-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/whiteline" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tvMrpInQtySelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="MRP : "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvSOHInQtySelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Rate: "
+                    android:visibility="invisible"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/whiteline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/allocStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/whiteline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/imgBtnMinusPack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@null"
+                    android:src="@drawable/ic_remove_circle_outline_24px" />
+
+                <!--                    android:layout_height="200px"-->
+
+                <EditText
+                    android:id="@+id/etQty"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/et_roundedbox_bg"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:selectAllOnFocus="true"
+                    android:text="1" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnPlusPack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:background="@null"
+                    android:fontFamily="@font/fabrica"
+                    android:src="@drawable/ic_add_circle_outline_24px" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/caculate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/calculate"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/cashDisc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/volDisc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Freeqty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fabrica"
+                    android:scrollbars="vertical"
+                    android:text="Free Quantity"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnAddItem_qtySelection"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:enabled="false"
+                android:text="OK"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/whiteline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fabrica"
+                    android:scrollbars="vertical"
+                    android:text="WareHouse"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="right"
+                    android:scrollbars="vertical"
+                    android:text="SOH"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/whiteline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/whText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fabrica"
+                    android:lines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/whSoh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/fabrica"
+                    android:gravity="end"
+                    android:lines="10"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="false"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

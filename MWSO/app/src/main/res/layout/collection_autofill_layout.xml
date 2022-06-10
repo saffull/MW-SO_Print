@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+
+
+        <TextView
+            android:id="@+id/billno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/fabrica"
+            android:gravity="left"
+            android:text="Bill No"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/due"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/fabrica"
+            android:gravity="right"
+            android:textSize="14sp"
+            android:text="Due"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/pay"
+            android:textSize="14sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:editable="false"
+            android:fontFamily="@font/fabrica"
+            android:gravity="center"
+            android:inputType="none"
+            android:textColor="@color/green" />
+
+        <CheckBox
+            android:id="@+id/select"
+            android:layout_width="0dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/fabrica"
+            android:gravity="right"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:text="ok"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>
