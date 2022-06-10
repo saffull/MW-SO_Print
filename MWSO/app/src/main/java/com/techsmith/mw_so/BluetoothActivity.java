@@ -63,7 +63,7 @@ public class BluetoothActivity extends AppCompatActivity {
     ProgressDialog pDialog;
     String strCheckLogin, strErrorMsg, printData = "", printStoreId = "",
             printSbNumber = "", s1 = "", s2 = "", printSBNumber, printStoreID,
-            qrString = "No data", qrData = "", irnNo = "",doc_no="";
+            qrString = "No data", qrData = "", irnNo = "", doc_no = "";
     PrintResponse printResponse;
     TextView MessageDisplay;
     SharedPreferences prefs;
@@ -372,7 +372,7 @@ public class BluetoothActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         String printerName = Printama.getPrinterResult(resultCode, requestCode, data);
-       // showResult(printerName);
+        // showResult(printerName);
     }
 
     private void showToast(String message) {
@@ -381,11 +381,12 @@ public class BluetoothActivity extends AppCompatActivity {
     }
 
     private class TakeBillSingle extends AsyncTask<String, String, String> {
-        ProgressDialog   Pdialog;
+        ProgressDialog Pdialog;
+
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-          Pdialog = new ProgressDialog(BluetoothActivity.this);
+            Pdialog = new ProgressDialog(BluetoothActivity.this);
             Pdialog.setMessage("Loading Single Bill..Please wait.!!");
             Pdialog.setCancelable(true);
             Pdialog.show();
@@ -465,10 +466,10 @@ public class BluetoothActivity extends AppCompatActivity {
             }
             Gson gson = new Gson();
             printResponse = gson.fromJson(s, PrintResponse.class);
-            try{
+            try {
                 if (s.isEmpty()) {
                     Toast.makeText(BluetoothActivity.this, "No result For Single bIll", Toast.LENGTH_SHORT).show();
-                } else if (printResponse.statusFlag==1) {
+                } else if (printResponse.statusFlag == 1) {
                     if (pDialog.isShowing()) {
                         pDialog.dismiss();
                     }
@@ -519,10 +520,9 @@ public class BluetoothActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-            }catch (Exception e){e.printStackTrace();}
-
-
-
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
 
         }
@@ -537,16 +537,16 @@ public class BluetoothActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH}, 1);
                 } else {
                     /*  "[L]" + df.format(new Date()) + "\n","[C]--------------------------------\n" + */
-                     connection = BluetoothPrintersConnections.selectFirstPaired();
+                    connection = BluetoothPrintersConnections.selectFirstPaired();
                     if (connection != null) {
                         EscPosPrinter printer = new EscPosPrinter(connection, 210, 48f, 32);
-                        if (irnNo.isEmpty()|| irnNo==null){
+                        if (irnNo.isEmpty() || irnNo == null) {
 
                             final String text =
                                     "[L]" + temp + "\n" +
-                                            "[C]--------------------------------\n" ;
+                                            "[C]--------------------------------\n";
                             printer.printFormattedText(text);
-                        }else{
+                        } else {
                             final String text =
                                     "[L]" + temp + "\n" +
                                             "[C]--------------------------------\n" +
@@ -569,7 +569,7 @@ public class BluetoothActivity extends AppCompatActivity {
                 }
 
                 SharedPreferences.Editor editor = prefs.edit();
-                editor.putString("printer_name",connection.getDevice().getName());
+                editor.putString("printer_name", connection.getDevice().getName());
                 editor.apply();
             } catch (Exception e) {
                 Log.e("APP", "Can't print", e);
@@ -588,6 +588,16 @@ public class BluetoothActivity extends AppCompatActivity {
             items[0] = "Default printer";
             int i = 0;
             for (BluetoothConnection device : bluetoothDevicesList) {
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
                 items[++i] = device.getDevice().getName();
             }
 

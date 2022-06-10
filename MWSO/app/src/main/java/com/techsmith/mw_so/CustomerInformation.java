@@ -15,6 +15,8 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -54,7 +56,7 @@ public class CustomerInformation extends AppCompatActivity {
     EditText etCustomerId, etCustomerAdrs, etCustomerMobile, etCustomerGSTNo, etReceivables;
     Button btnCreateSO;
     String loginResponse, Url, strCustomer, strErrorMsg, strReceivables, strReceivableDetails, uniqueID,
-            selectedCustomerName, multiSOStoredDevId,user_name;
+            selectedCustomerName, multiSOStoredDevId, user_name;
     int customerId, selectedCustomerId;
     ProgressDialog pDialog;
     CustomerList customerList;
@@ -91,7 +93,7 @@ public class CustomerInformation extends AppCompatActivity {
         loginResponse = prefs.getString("loginResponse", "");
         Url = prefs.getString("MultiSOURL", "");
         uniqueID = UUID.randomUUID().toString();
-        user_name=prefs.getString("user_name","");
+        user_name = prefs.getString("user_name", "");
         System.out.println("GUID is " + user_name);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("guid", uniqueID);
@@ -141,6 +143,24 @@ public class CustomerInformation extends AppCompatActivity {
                 tsMessages("Function Not yet Implemented..");
             }
         });
+        acvCustomerName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.toString().length() == 0) {
+                    acvCustomerName.setAdapter(null);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
         acvCustomerName.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -161,8 +181,8 @@ public class CustomerInformation extends AppCompatActivity {
                 prefs = PreferenceManager.getDefaultSharedPreferences(CustomerInformation.this);
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.putInt("CustomerId", customerList.data.get(pos).acid);
-                editor.putString("customer_id",etCustomerId.getText().toString());
-                editor.putString("customer_name",  acvCustomerName.getText().toString());
+                editor.putString("customer_id", etCustomerId.getText().toString());
+                editor.putString("customer_name", acvCustomerName.getText().toString());
                 editor.putString("CustomerName", selectedCustomerName);
                 editor.apply();
                 LockButtons();
@@ -212,8 +232,8 @@ public class CustomerInformation extends AppCompatActivity {
     }
 
     public void CreateSO(View view) {
-        if (!acvCustomerName.getText().toString().isEmpty() && ! etCustomerId.getText().toString().isEmpty()
-                ||  !etCustomerId.getText().toString().equalsIgnoreCase("0")) {
+        if (!acvCustomerName.getText().toString().isEmpty() && !etCustomerId.getText().toString().isEmpty()
+                || !etCustomerId.getText().toString().equalsIgnoreCase("0")) {
             finish();
             startActivity(new Intent(CustomerInformation.this, SOActivity.class));
         } else {

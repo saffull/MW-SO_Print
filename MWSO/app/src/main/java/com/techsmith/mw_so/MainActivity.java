@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     Boolean firstTime;
     String username, password, Url, multiSOStoredDevId, strCheckLogin, strErrorMsg;
     String[] permissions = {Manifest.permission.INTERNET,
-            Manifest.permission.ACCESS_WIFI_STATE, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_BACKGROUND_LOCATION};
+            Manifest.permission.ACCESS_WIFI_STATE, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_BACKGROUND_LOCATION,Manifest.permission.BLUETOOTH_CONNECT};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
         }).check();
         prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         firstTime = prefs.getBoolean("firstTime", true);
-        if (firstTime)
-            startActivity(new Intent(MainActivity.this, Settings.class));
+      /*  if (firstTime)
+            startActivity(new Intent(MainActivity.this, Settings.class));*/
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
