@@ -24,28 +24,28 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_truck"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_truck_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".SoMenu"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".BluetoothActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".BleActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
             android:name=".Delivery"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".Collections"
@@ -53,6 +53,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Category"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".CustomerInformation"
@@ -65,9 +66,11 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Settings"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

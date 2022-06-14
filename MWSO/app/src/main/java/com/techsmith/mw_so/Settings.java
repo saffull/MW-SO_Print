@@ -50,7 +50,8 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 public class Settings extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {
     TextView tvDeviceId, tvVersionName;
-    EditText etUrlValue, printer;
+    EditText etUrlValue;
+    TextView printer;
     String myuniqueID, URL, printerName, printer_name;
     SharedPreferences prefs;
     List<String> printList;
@@ -108,10 +109,6 @@ public class Settings extends AppCompatActivity implements EasyPermissions.Permi
 
         tvDeviceId.setText(myuniqueID);
         printer.setText(printer_name);
-        if (!printer.getText().toString().isEmpty())
-            button.setText(printer.getText().toString());
-        else
-            button.setText("Select Printer");
     }
 
     @Override
@@ -172,7 +169,7 @@ public class Settings extends AppCompatActivity implements EasyPermissions.Permi
                                 selectedDevice = bluetoothDevicesList[index];
                             }
 
-                            button.setText(items[i]);
+                            // button.setText(items[i]);
                             printer.setText(items[i]);
                         }
                     });
@@ -238,5 +235,9 @@ public class Settings extends AppCompatActivity implements EasyPermissions.Permi
     @Override
     public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
 
+    }
+
+    public void cancelPage(View view) {
+        finish();
     }
 }

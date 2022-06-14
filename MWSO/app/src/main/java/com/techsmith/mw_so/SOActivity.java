@@ -311,8 +311,8 @@ public class SOActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                System.out.println("text length is "+charSequence.toString().length());
-                if (charSequence.toString().length()==0)
+                System.out.println("text length is " + charSequence.toString().length());
+                if (charSequence.toString().length() == 0)
                     acvItemSearchSOActivity.setAdapter(null);
             }
 
@@ -1164,7 +1164,7 @@ public class SOActivity extends AppCompatActivity {
         protected String doInBackground(String... strings) {
             try {
                 URL url = new URL(Url + "GetProduct?name=" + filter);
-
+                System.out.println(Url + "GetProduct?name=" + filter);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.setReadTimeout(300000);
@@ -1934,7 +1934,7 @@ public class SOActivity extends AppCompatActivity {
                         System.out.println(qrString);
                     } else {
                         //tsMessages("E-Invoice Data Empty..");
-                        Toast.makeText(SOActivity.this,"E-Invoice Data Empty..",Toast.LENGTH_LONG).show();
+                        Toast.makeText(SOActivity.this, "E-Invoice Data Empty..", Toast.LENGTH_LONG).show();
                     }
 
                     qrdo();
@@ -2014,13 +2014,13 @@ public class SOActivity extends AppCompatActivity {
                     BluetoothConnection connection = BluetoothPrintersConnections.selectFirstPaired();
                     if (connection != null) {
                         EscPosPrinter printer = new EscPosPrinter(connection, 203, 48f, 32);
-                        if (irnNo.isEmpty()|| irnNo==null){
+                        if (irnNo.isEmpty() || irnNo == null) {
 
                             final String text =
                                     "[L]" + temp + "\n" +
-                                            "[C]--------------------------------\n" ;
+                                            "[C]--------------------------------\n";
                             printer.printFormattedText(text);
-                        }else{
+                        } else {
                             final String text =
                                     "[L]" + temp + "\n" +
                                             "[C]--------------------------------\n" +
@@ -2029,6 +2029,7 @@ public class SOActivity extends AppCompatActivity {
                                             "[L]<b>\n" + irnNo + "</b>";
                             printer.printFormattedText(text);
                         }
+                        connection.disconnect();
 
                       /*  final String text =
                                 "[L]" + temp + "\n" +
@@ -2039,10 +2040,10 @@ public class SOActivity extends AppCompatActivity {
 
                         printer.printFormattedText(text);*/
                     } else {
-                        Toast.makeText(this, "No printer was connected!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "No printer was connected..! Try Again", Toast.LENGTH_SHORT).show();
                     }
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("printer_name",connection.getDevice().getName());
+                    editor.putString("printer_name", connection.getDevice().getName());
                     editor.apply();
                 }
             } catch (Exception e) {
