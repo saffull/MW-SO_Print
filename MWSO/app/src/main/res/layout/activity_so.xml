@@ -19,7 +19,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="116dp"
         android:text="Menu"
-        android:enabled="false"
+        android:enabled="true"
         android:textColor="@color/white"
         app:backgroundTint="@color/purple_500"
         app:icon="@drawable/ic_arrow_up"

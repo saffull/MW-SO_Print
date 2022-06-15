@@ -555,6 +555,7 @@ public class BluetoothActivity extends AppCompatActivity {
                                             "[L]<b>\n" + irnNo + "</b>";
                             printer.printFormattedText(text);
                         }
+                        connection.disconnect();
 
                        /* final String text =
                                 "[L]" + temp + "\n" +
