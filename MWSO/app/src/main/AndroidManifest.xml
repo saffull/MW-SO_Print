@@ -41,9 +41,6 @@
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
-            android:name=".BleActivity"
-            android:exported="false" />
-        <activity
             android:name=".Delivery"
             android:screenOrientation="portrait"
             android:exported="true" />

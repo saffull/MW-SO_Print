@@ -17,10 +17,10 @@ import java.util.List;
 
 public class IRNAdapter extends RecyclerView.Adapter<IRNAdapter.MyViewHolder> {
 
-    private LayoutInflater inflater;
-    private String[] myImageNameList;
+    private final LayoutInflater inflater;
+    private final String[] myImageNameList;
     Gson gson;
-    private String response;
+    private final String response;
     InvResponse invResponse;
 
     public IRNAdapter(Context ctx, String[] myImageNameList, String strfromweb) {

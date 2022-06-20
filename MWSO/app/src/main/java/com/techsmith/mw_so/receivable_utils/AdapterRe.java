@@ -65,7 +65,7 @@ public class AdapterRe extends RecyclerView.Adapter<AdapterRe.MyViewHolder> {
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            DocId = (TextView) itemView.findViewById(R.id.docno);
+            DocId = itemView.findViewById(R.id.docno);
             txtBalance = itemView.findViewById(R.id.overdue);
             txtAmount = itemView.findViewById(R.id.Billamount);
 

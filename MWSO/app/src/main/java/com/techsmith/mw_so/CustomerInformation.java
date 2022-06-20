@@ -188,6 +188,40 @@ public class CustomerInformation extends AppCompatActivity {
                 LockButtons();
 
 
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(CustomerInformation.this);
+                alertDialogBuilder.setMessage("Do you want to load Receivables for the customer..!!");
+                alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int arg1) {
+                        dialog.cancel();
+                        System.out.println("Customer ID is " + customerId);
+                        customerId = userPLObj.summary.customerId;
+                        if (customerId != 0) {
+                            new GetReceivablesTask().execute();
+                        } else if (selectedCustomerId != 0) {
+                            customerId = selectedCustomerId;
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putString("selectedCustomerName", selectedCustomerName);
+                            editor.putInt("selectedCustomerId", selectedCustomerId);
+                            editor.apply();
+                            new GetReceivablesTask().execute();
+                        } else {
+                            Toast.makeText(CustomerInformation.this, "No Customer Specified..!!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+
+
             }
         });
 
@@ -370,7 +404,7 @@ public class CustomerInformation extends AppCompatActivity {
                     dialog.getWindow().setAttributes(lp);
 
 
-                    Button btndialog = (Button) dialog.findViewById(R.id.btndialog);
+                    Button btndialog = dialog.findViewById(R.id.btndialog);
                     TextView dialog_cust = dialog.findViewById(R.id.dialog_cust);
                     TextView total = dialog.findViewById(R.id.total);
                     total.setText("Total: " + etReceivables.getText().toString().trim());

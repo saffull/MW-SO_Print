@@ -613,8 +613,8 @@ public class BluetoothActivity extends AppCompatActivity {
                     } else {
                         selectedDevice = bluetoothDevicesList[index];
                     }
-                    Button button = findViewById(R.id.button_bluetooth_browse);
-                    button.setText(items[i]);
+                  //  Button button = findViewById(R.id.button_bluetooth_browse);
+                   // button.setText(items[i]);
                 }
             });
 

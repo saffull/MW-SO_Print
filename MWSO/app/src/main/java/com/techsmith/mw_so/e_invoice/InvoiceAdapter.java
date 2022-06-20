@@ -18,8 +18,8 @@ import java.util.List;
 
 public class InvoiceAdapter extends RecyclerView.Adapter<InvoiceAdapter.MyViewHolder> {
 
-    private LayoutInflater inflater;
-    private String[] myImageNameList;
+    private final LayoutInflater inflater;
+    private final String[] myImageNameList;
 
     List<String> billidList, billnoList, storeidList;
 
@@ -65,7 +65,7 @@ public class InvoiceAdapter extends RecyclerView.Adapter<InvoiceAdapter.MyViewHo
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            name = (TextView) itemView.findViewById(R.id.name);
+            name = itemView.findViewById(R.id.name);
             billid = itemView.findViewById(R.id.billid);
             invbtn = itemView.findViewById(R.id.invBtn);
 

@@ -74,7 +74,7 @@ public class Settings extends AppCompatActivity implements EasyPermissions.Permi
         etUrlValue = findViewById(R.id.etUrlValue);
         tvVersionName = findViewById(R.id.tvAppVersionValue);
         printer = findViewById(R.id.printer);
-        button = findViewById(R.id.button_bluetooth_browse);
+       // button = findViewById(R.id.button_bluetooth_browse);
         prefs = PreferenceManager.getDefaultSharedPreferences(Settings.this);
 
         if (EasyPermissions.hasPermissions(this, permission)) {
